@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D Asish Kethan | Portfolio &amp; Bio-Data</title>
+<style>
+:root{--primary:#1b4332;--hover:#2d6a4f;--light:#e3efe7;--sec:#406a52;--text:#231c16;--muted:#5e4c3e;--bg:#d8c5b0;--card:#faf6f0;--border:#bfaea0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.5}
+a{color:var(--primary);text-decoration:none}
+.container{max-width:960px;margin:auto;padding:0 1rem}
+header{background:var(--card);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:.75rem 1rem;flex-wrap:wrap;gap:.5rem}
+.brand{font-size:1.25rem;font-weight:700;color:var(--primary);cursor:pointer}
+.brand span{font-size:.8rem;color:var(--muted);display:block;font-weight:400}
+nav{display:flex;gap:.4rem}
+.tab-btn{font:inherit;font-weight:600;font-size:.9rem;padding:.4rem .8rem;border:1px solid transparent;border-radius:4px;background:none;color:var(--text);cursor:pointer}
+.tab-btn:hover{background:var(--light);color:var(--primary)}
+.tab-btn.active{background:var(--primary);color:#fff}
+main{padding:1.5rem 0}
+.view{display:none}
+.view.active{display:block}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.25rem;margin-bottom:1rem;box-shadow:0 1px 3px rgba(35,28,22,.08)}
+h2{font-size:1.35rem;color:var(--primary);margin-bottom:.75rem;border-bottom:2px solid var(--sec);padding-bottom:.3rem}
+h3{font-size:1.05rem;color:var(--primary);margin-bottom:.35rem}
+p,li{font-size:.92rem;color:var(--text);margin-bottom:.4rem}
+ul{padding-left:1.2rem}
+.btn{display:inline-block;padding:.45rem .9rem;font-size:.85rem;font-weight:600;border-radius:4px;border:none;cursor:pointer;background:var(--primary);color:#fff}
+.btn:hover{background:var(--hover)}
+.btn-alt{background:transparent;border:1px solid var(--primary);color:var(--primary)}
+.btn-alt:hover{background:var(--light)}
+.btn-row{display:flex;gap:.5rem;margin-top:.75rem;flex-wrap:wrap}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+table{width:100%;border-collapse:collapse;margin:.5rem 0;font-size:.9rem}
+th,td{padding:.5rem .75rem;border:1px solid var(--border);text-align:left}
+th{background:var(--light);color:var(--primary)}
+td.lbl{width:30%;font-weight:600;background:#f1e7db}
+.form-group{margin-bottom:.75rem}
+label{display:block;font-size:.85rem;font-weight:600;margin-bottom:.2rem}
+input,textarea{width:100%;padding:.5rem;font:inherit;font-size:.9rem;border:1px solid var(--border);border-radius:4px;background:#fff;outline:none}
+input:focus,textarea:focus{border-color:var(--primary);box-shadow:0 0 0 2px rgba(27,67,50,.15)}
+.err{color:#8b1e1e;font-size:.8rem;display:none;margin-top:.2rem}
+.alert{display:none;padding:.75rem;border-radius:4px;background:var(--light);border:1px solid #95c2a7;color:var(--primary);font-weight:600;margin-bottom:1rem}
+footer{background:var(--card);border-top:1px solid var(--border);text-align:center;padding:1rem;font-size:.85rem;color:var(--muted);margin-top:2rem}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav-wrap">
+<div class="brand" onclick="showTab('home')">D Asish Kethan<span>B.E. Computer Science &bull; 3rd Year</span></div>
+<nav>
+<button type="button" class="tab-btn active" onclick="showTab('home')">Home</button>
+<button type="button" class="tab-btn" onclick="showTab('resume')">Resume</button>
+<button type="button" class="tab-btn" onclick="showTab('biodata')">Bio-Data</button>
+<button type="button" class="tab-btn" onclick="showTab('contact')">Contact</button>
+</nav>
+</div>
+</header>
+<main class="container">
+<section id="home-view" class="view active">
+<div class="card">
+<h2>D Asish Kethan</h2>
+<p><strong>Undergraduate Student &bull; B.E. Computer Science and Engineering (3rd Year) &bull; India</strong></p>
+<p>I am an engineering undergraduate focused on software engineering, problem solving, data structures, and web technologies. I enjoy building functional applications and exploring practical technology solutions.</p>
+<div class="btn-row">
+<button type="button" class="btn" onclick="showTab('resume')">View Resume</button>
+<button type="button" class="btn btn-alt" onclick="showTab('biodata')">View Bio-Data</button>
+<button type="button" class="btn btn-alt" onclick="showTab('contact')">Contact</button>
+</div>
+</div>
+<div class="grid-2">
+<div class="card">
+<h3>Academic Profile</h3>
+<p>Degree: Bachelor of Engineering (B.E.)</p>
+<p>Discipline: Computer Science and Engineering</p>
+<p>Current Standing: 3rd Year (CGPA: 8.4 / 10.0)</p>
+<p>Location: India</p>
+</div>
+<div class="card">
+<h3>Core Technical Areas</h3>
+<p>Web Development: HTML5, CSS3, JavaScript, jQuery</p>
+<p>Programming: C, C++, Java, Python</p>
+<p>Databases &amp; Tools: MySQL, Git, GitHub, VS Code</p>
+<p>Foundations: Data Structures, OOP, DBMS, OS</p>
+</div>
+</div>
+</section>
+<section id="resume-view" class="view">
+<div class="card">
+<h2>Career Objective</h2>
+<p>Motivated 3rd-year Computer Science Engineering student seeking opportunities to apply foundational skills in software development and web technologies to engineer effective solutions while advancing technical competence.</p>
+</div>
+<div class="card">
+<h2>Education</h2>
+<p><strong>B.E. in Computer Science &amp; Engineering</strong> | Your College Name, India (2023 - 2027) &mdash; CGPA: 8.4/10.0</p>
+<p><strong>Class XII (Intermediate / MPC)</strong> | Junior College Name, India (2021 - 2023) &mdash; 92.4%</p>
+<p><strong>Class X (Secondary School Certificate)</strong> | School Name, India (2020 - 2021) &mdash; 94.8%</p>
+</div>
+<div class="card">
+<h2>Academic Projects</h2>
+<p><strong>1. RoadIntel &mdash; Web-Based Road Intelligence Platform</strong></p>
+<p>Technologies: HTML5, CSS3, JavaScript, Python (Flask), MySQL, Leaflet Maps API</p>
+<p>Features: Interactive hazard map displaying pothole reports, crowd-sourced defect submission portal, and calculated road severity scoring.</p>
+<p style="margin-top:.75rem"><strong>2. AI-Based Plant Disease Detection Using Leaf Images</strong></p>
+<p>Technologies: Python, TensorFlow/Keras, OpenCV, HTML5, CSS3, JavaScript</p>
+<p>Features: Convolutional Neural Network (CNN) leaf disease classification, automated image preprocessing, prediction confidence score, and remediation guide.</p>
+</div>
+<div class="grid-2">
+<div class="card">
+<h2>Technical Skills</h2>
+<ul>
+<li>Languages: C, C++, Java, Python, JavaScript</li>
+<li>Web: HTML5, CSS3, jQuery, Responsive Design</li>
+<li>Databases: MySQL, Relational Schema Design</li>
+<li>Tools: Git, GitHub, Linux, Visual Studio Code</li>
+</ul>
+</div>
+<div class="card">
+<h2>Areas of Interest &amp; Strengths</h2>
+<ul>
+<li>Full-stack web application development</li>
+<li>Machine learning and computer vision</li>
+<li>Analytical reasoning and structured debugging</li>
+<li>Collaborative team player with good communication</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="biodata-view" class="view">
+<div class="card">
+<h2>Bio-Data</h2>
+<table>
+<tr><td class="lbl">Full Name</td><td>D Asish Kethan</td></tr>
+<tr><td class="lbl">Father's Name</td><td>Damodara Naidu</td></tr>
+<tr><td class="lbl">Date of Birth</td><td>04 / 04 / 2006</td></tr>
+<tr><td class="lbl">Gender</td><td>Male</td></tr>
+<tr><td class="lbl">Nationality</td><td>Indian</td></tr>
+<tr><td class="lbl">Languages Known</td><td>English, Telugu, Hindi</td></tr>
+<tr><td class="lbl">Contact Number</td><td>+91-9483186977</td></tr>
+<tr><td class="lbl">Email Address</td><td>asishkethan@gmail.com</td></tr>
+<tr><td class="lbl">Permanent Address</td><td>Door No. / Street, City, State - PIN, India</td></tr>
+</table>
+<h3 style="margin-top:1rem">Educational Qualifications</h3>
+<table>
+<tr><th>Examination</th><th>Institution / University</th><th>Year</th><th>Score</th></tr>
+<tr><td>B.E. (CSE 3rd Year)</td><td>Your College Name</td><td>2023 - 2027</td><td>8.4 CGPA</td></tr>
+<tr><td>Class XII (MPC)</td><td>Junior College Name</td><td>2023</td><td>92.4%</td></tr>
+<tr><td>Class X (SSC)</td><td>Secondary School Name</td><td>2021</td><td>94.8%</td></tr>
+</table>
+<h3 style="margin-top:1rem">Declaration</h3>
+<p>I hereby solemnly affirm that the particulars stated above are true and correct to the best of my knowledge and belief.</p>
+<div style="display:flex;justify-content:space-between;margin-top:1.5rem;flex-wrap:wrap">
+<p>Date: 02 / 10 / 2026<br>Place: City, India</p>
+<p style="text-align:right">D Asish Kethan<br>(Candidate Signature)</p>
+</div>
+</div>
+</section>
+<section id="contact-view" class="view">
+<div class="grid-2">
+<div class="card">
+<h2>Contact Details</h2>
+<p><strong>Email:</strong>asishkethan@gmail.com</p>
+<p><strong>Phone:</strong> +91-9483186977</p>
+<p><strong>Location:</strong> India</p>
+<p><strong>Status:</strong> B.E. 3rd Year Student</p>
+<p style="margin-top:.75rem"><strong>Profiles:</strong></p>
+<p>GitHub: github.com/D Asish Kethan</p>
+<p>LinkedIn: linkedin.com/in/your-profile</p>
+</div>
+<div class="card">
+<h2>Send a Message</h2>
+<div id="contact-alert" class="alert">Message Sent Successfully! Thank you for reaching out.</div>
+<form id="contact-form" novalidate>
+<div class="form-group">
+<label for="c-name">Full Name *</label>
+<input type="text" id="c-name" required>
+<div id="err-name" class="err">Please enter your name (minimum 3 characters).</div>
+</div>
+<div class="form-group">
+<label for="c-email">Email Address *</label>
+<input type="email" id="c-email" required>
+<div id="err-email" class="err">Please enter a valid email address.</div>
+</div>
+<div class="form-group">
+<label for="c-msg">Message *</label>
+<textarea id="c-msg" rows="4" required></textarea>
+<div id="err-msg" class="err">Please enter your message (minimum 10 characters).</div>
+</div>
+<button type="submit" class="btn">Send Message</button>
+<button type="reset" class="btn btn-alt">Reset</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<p>&copy; <span id="yr"></span> D Asish Kethan. Web Programming Assignment.</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+function showTab(tabName){
+$(".view").removeClass("active");
+$("#"+tabName+"-view").addClass("active");
+$(".tab-btn").removeClass("active");
+$(".tab-btn").filter(function(){
+return $(this).text().toLowerCase().indexOf(tabName.substring(0,3))!==-1;
+}).addClass("active");
+window.scrollTo({top:0,behavior:"smooth"});
+}
+$(document).ready(function(){
+$("#yr").text(new Date().getFullYear());
+$("#contact-form").on("submit",function(e){
+e.preventDefault();
+var valid=true;
+var name=$("#c-name").val().trim();
+var email=$("#c-email").val().trim();
+var msg=$("#c-msg").val().trim();
+var emailReg=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if(name.length<3){$("#err-name").show();valid=false;}else{$("#err-name").hide();}
+if(!emailReg.test(email)){$("#err-email").show();valid=false;}else{$("#err-email").hide();}
+if(msg.length<10){$("#err-msg").show();valid=false;}else{$("#err-msg").hide();}
+if(valid){
+this.reset();
+$(".err").hide();
+$("#contact-alert").slideDown(300).delay(4000).slideUp(300);
+}
+});
+$("#contact-form").on("reset",function(){
+$(".err").hide();
+$("#contact-alert").hide();
+});
+});
+</script>
+</body>
+</html>
